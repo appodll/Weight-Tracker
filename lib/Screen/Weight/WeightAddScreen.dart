@@ -7,6 +7,7 @@ import 'package:weighttracker/Constant/ButtonElement.dart';
 import 'package:weighttracker/Constant/StaticText.dart';
 import 'package:weighttracker/Constant/WeightAddScreenElement/CalendarElement.dart';
 import 'package:weighttracker/Constant/WeightAddScreenElement/ScreenHeader.dart';
+import 'package:weighttracker/Constant/WeightAddScreenElement/WeightSelectElement.dart';
 import 'package:weighttracker/Controller/Stroge.dart';
 import 'package:weighttracker/Controller/WeightController.dart';
 import 'package:weighttracker/Theme/ThemeService.dart';
@@ -125,47 +126,7 @@ class _WeightaddScreenState extends State<WeightaddScreen> {
                 SizedBox(height: 40),
                 Calendarelement(),
                 SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    Statictext(
-                      text: weight_controller.initial_kg.value.toString(),
-                      color: Colors.white,
-                      size: 35,
-                      fontWeight: FontWeight.w600,
-                    ),
-                    Padding(
-                      padding: EdgeInsetsGeometry.only(bottom: 10),
-                      child: Statictext(
-                        text: "kg",
-                        color: Colors.white,
-                        size: 15,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20),
-                TapeSlider(
-                  onValueChanged: (p0) {
-                    weight_controller.initial_kg.value = p0;
-                  },
-                  initialValue: weight_controller.initial_kg.value,
-                  minValue: 40.0,
-                  maxValue: 150.0,
-                  itemExtent: 20.0,
-                  activeColor: Colors.white,
-                  inactiveColor: Colors.white,
-                  indicatorColor: primarycolor2.value,
-                  majorTickLabelStyle: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  trackHeight: 150,
-                  showLabels: true,
-                  minorTickLabelStyle: TextStyle(fontSize: 12),
-                ),
+                Weightselectelement()
               ],
             ),
           ),

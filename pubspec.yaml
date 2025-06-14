@@ -45,6 +45,8 @@ dependencies:
   hive_generator: ^2.0.1
   build_runner: ^2.4.15
   hive_flutter: ^1.1.0
+  responsive_container_ns: ^0.0.2
+  rename_app: ^1.6.3
 
 dev_dependencies:
   flutter_test:
