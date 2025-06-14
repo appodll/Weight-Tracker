@@ -116,17 +116,18 @@ class _WeightaddScreenState extends State<WeightaddScreen> {
           radius: 40,
         ),
       ),
-      body: Obx(
-        () => SafeArea(
-          child: Padding(
-            padding: EdgeInsetsGeometry.all(15),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsetsGeometry.all(15),
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 WeightAddHeader(),
                 SizedBox(height: 40),
                 Calendarelement(),
                 SizedBox(height: 20),
-                Weightselectelement()
+                Weightselectelement(),
+                SizedBox(height: 20,)
               ],
             ),
           ),

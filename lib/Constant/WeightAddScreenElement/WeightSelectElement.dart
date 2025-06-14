@@ -39,7 +39,7 @@ class Weightselectelement extends StatelessWidget {
           ),
           SizedBox(height: 20),
           ResponsiveContainer(
-            heightPercent: 15,
+            heightPercent: 20,
             widthPercent: Get.width - 30,
             child: TapeSlider(
               onValueChanged: (p0) {
